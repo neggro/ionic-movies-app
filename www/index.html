@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Movies and Series</title>
+    <style type="text/css">
+        /**
+         * Hide when Angular is not yet loaded and initialized
+         */
+        [ng\:cloak],
+        [ng-cloak],
+        [data-ng-cloak],
+        [x-ng-cloak],
+        .ng-cloak,
+        .x-ng-cloak {
+            display: none !important;
+        }
+    </style>
+    <!-- compiled css output -->
+    <link href="css/roboto-fontface.min.css" rel="stylesheet">
+    <link href="lib/angular-material/angular-material.min.css" rel="stylesheet">
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+    <!-- angular material js -->
+    <script src="lib/angular-material/angular-material.js"></script>
+    <script src="lib/angular-aria/angular-aria.js"></script>
+    <!-- your app's js -->
+    <script src="app/app.module.js"></script>
+    <script src="app/core/core.module.js"></script>
+    <script src="app/core/core.config.js"></script>
+</head>
+<body ng-app="moviesApp">
+    <div layout="column" class="main" ng-cloak>
+        <header>
+            <md-toolbar>
+                <div class="md-toolbar-tools">
+                    <h1>Movies and Series</h1>
+                    <span flex></span>
+                    <md-menu ng-if="vm.user" md-position-mode="target-right target">
+                        <md-button class="md-icon-button" aria-label="More" ng-click="$mdOpenMenu($event);">
+                            <i class="material-icons md-24 md-light">more_vert</i>
+                        </md-button>
+                        <md-menu-content class="more-menu-content">
+                            <md-menu-item>
+                                <md-button ng-click="vm.userInfo();">User info</md-button>
+                            </md-menu-item>
+                            <md-menu-item>
+                                <md-button ng-click="vm.logout();">Logout</md-button>
+                            </md-menu-item>
+                        </md-menu-content>
+                    </md-menu>
+                </div>
+            </md-toolbar>
+        </header>
+        <md-content flex>
+            <ui-view></ui-view>
+        </md-content>
+    </div>
+</body>
+</html>
