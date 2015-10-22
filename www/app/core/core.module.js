@@ -3,8 +3,10 @@
 
     angular
         .module('moviesApp.core', [
-            'ngMaterial',
-            'ui.router'
+            'ui.router',
+            'moviesApp.nav',
+            'moviesApp.movies',
+            'moviesApp.home'
         ]);
 
 })();

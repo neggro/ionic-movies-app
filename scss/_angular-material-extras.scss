@@ -1,0 +1,114 @@
+/* fix for autcomplete inputs in chrome */
+input:-webkit-autofill {
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.87) !important;
+    -webkit-box-shadow: 0 0 0px 1000px #303030 inset;
+}
+
+
+html,
+body {
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 14px;
+    min-width: 320px;
+}
+
+md-content {
+    background: #303030;
+}
+
+md-card {
+    background: #424242;
+    margin-bottom: 30px;
+}
+
+md-backdrop.md-opaque {
+    background-color: rgba(254, 254, 254, 1);
+}
+
+md-progress-circular {
+    margin: 50px auto 0;
+}
+
+md-toolbar md-icon.md-default-theme {
+    color: white;
+}
+
+.more-menu-content {
+    color: #ffffff;
+}
+
+.md-button.md-fab.add-post-btn,
+.md-button.md-fab.add-post-btn:hover {
+    bottom: 5px;
+    position: fixed;
+    right: 5px;
+}
+
+.md-title.article-title {
+    margin-top: 0;
+}
+
+.md-button.md-primary.md-raised,
+.md-button.md-primary.md-raised:not([disabled]):hover {
+    background: #673AB7;
+}
+
+.md-actions .md-button.md-fab.confirm-btn,
+.md-actions .md-button.md-fab.confirm-btn:hover {
+    background: #4CAF50;
+}
+
+.md-actions .md-button.md-fab.alert-btn,
+.md-actions .md-button.md-fab.alert-btn:hover {
+    background: #f44336;
+}
+
+/* accept button */
+md-dialog .md-actions .md-button,
+.md-button.md-default-theme.md-primary:not([disabled]) {
+    color: #81C784;
+}
+
+/* cancel button */
+md-dialog .md-actions .md-button:first-child,
+.md-button.md-default-theme.md-primary:not([disabled]):first-child {
+    color: #e57373;
+}
+
+md-toast.md-default-theme,
+md-toast {
+    background: #000;
+    color: rgb(255, 82, 82);
+    text-shadow: 0px 0px 1px #424242;
+}
+
+.main {
+    min-height: 100%;
+}
+
+/* container class like bootstrap */
+.container {
+    padding: 0 8px;
+    margin: 15px auto;
+}
+/*
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+*/
+
+.container-dialog {
+    padding: 0 10px;
+}

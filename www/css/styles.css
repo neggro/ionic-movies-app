@@ -1,0 +1,164 @@
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"), local("Roboto-Regular"), url("../fonts/Roboto-Regular.eot"), url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"), local("Roboto-RegularItalic"), url("../fonts/Roboto-RegularItalic.eot"), url("../fonts/Roboto-RegularItalic.woff2") format("woff2"), url("../fonts/Roboto-RegularItalic.woff") format("woff"), url("../fonts/Roboto-RegularItalic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic; }
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"), local("Roboto-Medium"), url("../fonts/Roboto-Medium.eot"), url("../fonts/Roboto-Medium.woff2") format("woff2"), url("../fonts/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto"), local("Roboto-Bold"), url("../fonts/Roboto-Bold.eot"), url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Material Icons";
+  src: local("Material Icons"), local("MaterialIcons-Regular"), url("../fonts/MaterialIcons-Regular.eot"), url("../fonts/MaterialIcons-Regular.woff2") format("woff2"), url("../fonts/MaterialIcons-Regular.woff") format("woff"), url("../fonts/MaterialIcons-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  /* Preferred icon size */
+  font-size: 24px;
+  display: inline-block;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+  /* Rules for sizing the icon. */
+  /* Rules for using icons as black on a light background. */
+  /* Rules for using icons as white on a dark background. */ }
+  .material-icons.md-18 {
+    font-size: 18px; }
+  .material-icons.md-24 {
+    font-size: 24px; }
+  .material-icons.md-36 {
+    font-size: 36px; }
+  .material-icons.md-48 {
+    font-size: 48px; }
+  .material-icons.md-dark {
+    color: rgba(0, 0, 0, 0.54); }
+  .material-icons.md-dark.md-inactive {
+    color: rgba(0, 0, 0, 0.26); }
+  .material-icons.md-light {
+    color: white; }
+  .material-icons.md-light.md-inactive {
+    color: rgba(255, 255, 255, 0.3); }
+
+/* fix for autcomplete inputs in chrome */
+input:-webkit-autofill {
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.87) !important;
+  -webkit-box-shadow: 0 0 0px 1000px #303030 inset; }
+
+html,
+body {
+  color: rgba(255, 255, 255, 0.87);
+  font-size: 14px;
+  min-width: 320px; }
+
+md-content {
+  background: #303030; }
+
+md-card {
+  background: #424242;
+  margin-bottom: 30px; }
+
+md-backdrop.md-opaque {
+  background-color: #fefefe; }
+
+md-progress-circular {
+  margin: 50px auto 0; }
+
+md-toolbar md-icon.md-default-theme {
+  color: white; }
+
+.more-menu-content {
+  color: #ffffff; }
+
+.md-button.md-fab.add-post-btn,
+.md-button.md-fab.add-post-btn:hover {
+  bottom: 5px;
+  position: fixed;
+  right: 5px; }
+
+.md-title.article-title {
+  margin-top: 0; }
+
+.md-button.md-primary.md-raised,
+.md-button.md-primary.md-raised:not([disabled]):hover {
+  background: #673AB7; }
+
+.md-actions .md-button.md-fab.confirm-btn,
+.md-actions .md-button.md-fab.confirm-btn:hover {
+  background: #4CAF50; }
+
+.md-actions .md-button.md-fab.alert-btn,
+.md-actions .md-button.md-fab.alert-btn:hover {
+  background: #f44336; }
+
+/* accept button */
+md-dialog .md-actions .md-button,
+.md-button.md-default-theme.md-primary:not([disabled]) {
+  color: #81C784; }
+
+/* cancel button */
+md-dialog .md-actions .md-button:first-child,
+.md-button.md-default-theme.md-primary:not([disabled]):first-child {
+  color: #e57373; }
+
+md-toast.md-default-theme,
+md-toast {
+  background: #000;
+  color: #ff5252;
+  text-shadow: 0px 0px 1px #424242; }
+
+.main {
+  min-height: 100%; }
+
+/* container class like bootstrap */
+.container {
+  padding: 0 8px;
+  margin: 15px auto; }
+
+/*
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+*/
+.container-dialog {
+  padding: 0 10px; }

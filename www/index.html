@@ -16,9 +16,16 @@
         .x-ng-cloak {
             display: none !important;
         }
+        .container md-grid-tile {
+            transition: all 400ms ease-out 50ms;
+        }
+        .container md-grid-tile img {
+            height: 100%;
+            width: 100%;
+        }
     </style>
     <!-- compiled css output -->
-    <link href="css/roboto-fontface.min.css" rel="stylesheet">
+    <link href="css/styles.min.css" rel="stylesheet">
     <link href="lib/angular-material/angular-material.min.css" rel="stylesheet">
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
@@ -31,15 +38,34 @@
     <script src="app/app.module.js"></script>
     <script src="app/core/core.module.js"></script>
     <script src="app/core/core.config.js"></script>
+    <script src="app/core/core.constants.js"></script>
+    <script src="app/nav/nav.module.js"></script>
+    <script src="app/nav/nav.controller.js"></script>
+    <script src="app/movies/movie.module.js"></script>
+    <script src="app/movies/movie.service.js"></script>
+    <script src="app/home/home.module.js"></script>
+    <script src="app/home/home.config.js"></script>
+    <script src="app/home/home.controller.js"></script>
 </head>
-<body ng-app="moviesApp">
-    <div layout="column" class="main" ng-cloak>
-        <header>
+<body ng-app="moviesApp" layout="row">
+    <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2"
+                md-component-id="left"
+                md-is-locked-open="$mdMedia('gt-md')">
+
+        <md-toolbar class="md-whiteframe-z1">
+            <h2>Menu</h2>
+        </md-toolbar>
+    </md-sidenav>
+    <div layout="column" class="main" ng-cloak flex>
+        <header ng-controller="NavController as vm">
             <md-toolbar>
                 <div class="md-toolbar-tools">
+                    <md-button class="md-icon-button" aria-label="More" ng-click="vm.sideNavToggle();">
+                        <i class="material-icons md-24 md-light">menu</i>
+                    </md-button>
                     <h1>Movies and Series</h1>
                     <span flex></span>
-                    <md-menu ng-if="vm.user" md-position-mode="target-right target">
+                    <md-menu md-position-mode="target-right target">
                         <md-button class="md-icon-button" aria-label="More" ng-click="$mdOpenMenu($event);">
                             <i class="material-icons md-24 md-light">more_vert</i>
                         </md-button>
@@ -56,7 +82,9 @@
             </md-toolbar>
         </header>
         <md-content flex>
-            <ui-view></ui-view>
+            <div class="container">
+                <ui-view></ui-view>
+            </div>
         </md-content>
     </div>
 </body>

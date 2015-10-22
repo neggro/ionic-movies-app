@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var gutil = require('gulp-util');
+var colors = gutil.colors;
 var bower = require('bower');
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
@@ -17,7 +18,7 @@ gulp.task('help', taskListing);
 
 gulp.task('default', ['sass']);
 
-gulp.task('sass', function(done) {
+gulp.task('sass', ['clean-styles'], function (done) {
     gulp.src('./scss/*.scss')
         .pipe(sass())
         .on('error', sass.logError)
@@ -39,19 +40,32 @@ gulp.task('watch', function() {
 gulp.task('install', ['git-check'], function() {
     return bower.commands.install()
         .on('log', function(data) {
-            gutil.log('bower', gutil.colors.cyan(data.id), data.message);
+            gutil.log('bower', colors.cyan(data.id), data.message);
         });
 });
 
 gulp.task('git-check', function(done) {
     if (!sh.which('git')) {
         console.log(
-            '  ' + gutil.colors.red('Git is not installed.'),
+            '  ' + colors.red('Git is not installed.'),
             '\n  Git, the version control system, is required to download Ionic.',
-            '\n  Download git here:', gutil.colors.cyan('http://git-scm.com/downloads') + '.',
-            '\n  Once git is installed, run \'' + gutil.colors.cyan('gulp install') + '\' again.'
+            '\n  Download git here:', colors.cyan('http://git-scm.com/downloads') + '.',
+            '\n  Once git is installed, run \'' + colors.cyan('gulp install') + '\' again.'
         );
         process.exit(1);
     }
     done();
+});
+
+gulp.task('md-icons', function () {
+    gulp.src('./www/lib/material-design-icons/iconfont/Material*.*')
+        .pipe(gulp.dest('./www/fonts'));
+});
+
+gulp.task('clean-styles', function () {
+    del('./www/css/*.*').then(function (path) {
+        console.log(colors.green('\n Deleted css: ' + path.replace(/,/g, '\n ')));
+    }, function (err) {
+        console.log(colors.red('\n Error deleting css: ' + err));
+    });
 });

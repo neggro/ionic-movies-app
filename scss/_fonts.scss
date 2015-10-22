@@ -1,0 +1,27 @@
+$font-path: '../fonts' !default;
+
+@mixin font($fontFamily, $local, $type, $weight, $style: normal) {
+    @font-face {
+        font-family: '#{$fontFamily}';
+        src: local('#{$fontFamily}'),
+             local('#{$local}-#{$type}'),
+             url('#{$font-path}/#{$local}-#{$type}.eot'),
+             url('#{$font-path}/#{$local}-#{$type}.woff2') format('woff2'),
+             url('#{$font-path}/#{$local}-#{$type}.woff') format('woff'),
+             url('#{$font-path}/#{$local}-#{$type}.ttf') format('truetype');
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+
+@mixin font-pair($fontFamily, $local, $type, $weight, $italic: false) {
+    @include font($fontFamily, $local, $type, $weight);
+    @if $italic {
+        @include font($fontFamily, $local, #{$type}Italic, $weight, italic);
+    }
+}
+
+@include font-pair('Roboto', 'Roboto', 'Regular', 400, true);
+@include font-pair('Roboto', 'Roboto', 'Medium', 500);
+@include font-pair('Roboto', 'Roboto', 'Bold', 700);
+@include font-pair('Material Icons', 'MaterialIcons', 'Regular', 400);

@@ -12,7 +12,7 @@
 
     /* @ngInject */
     function coreConfig($urlRouterProvider) {
-        $urlRouterProvider.otherwise('/login');
+        $urlRouterProvider.otherwise('/');
     }
 
     /* @ngInject */
