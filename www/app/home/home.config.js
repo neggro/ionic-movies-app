@@ -18,6 +18,12 @@
                 templateUrl: 'app/home/home.html',
                 controller: 'HomeController',
                 controllerAs: 'vm'
+            })
+            .state('latest', {
+                url: '/',
+                templateUrl: 'app/home/home.html',
+                controller: 'HomeController',
+                controllerAs: 'vm'
             });
     }
 

@@ -58,7 +58,7 @@ gulp.task('git-check', function(done) {
 });
 
 gulp.task('md-icons', function () {
-    gulp.src('./www/lib/material-design-icons/iconfont/Material*.*')
+    gulp.src('./bower_components/material-design-icons/iconfont/Material*.*')
         .pipe(gulp.dest('./www/fonts'));
 });
 

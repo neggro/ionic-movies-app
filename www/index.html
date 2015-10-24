@@ -48,17 +48,33 @@
     <script src="app/home/home.controller.js"></script>
 </head>
 <body ng-app="moviesApp" layout="row">
-    <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2"
-                md-component-id="left"
-                md-is-locked-open="$mdMedia('gt-md')">
-
+    <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
         <md-toolbar class="md-whiteframe-z1">
-            <h2>Menu</h2>
+            <div class="md-toolbar-tools">
+                <h2>Menu</h2>
+            </div>
         </md-toolbar>
+        <md-list>
+            <md-list-item>
+                <md-button ng-href="#/latest">Latest</md-button>
+            </md-list-item>
+            <md-list-item>
+                <md-button ng-href="#/popular">Popular</md-button>
+            </md-list-item>
+            <md-list-item>
+                <md-button ng-href="#/top-rated">Top Rated</md-button>
+            </md-list-item>
+            <md-list-item>
+                <md-button ng-href="#/now-playing">Now Playing</md-button>
+            </md-list-item>
+            <md-list-item>
+                <md-button ng-href="#/upcoming">Upcoming</md-button>
+            </md-list-item>
+        </md-list>
     </md-sidenav>
     <div layout="column" class="main" ng-cloak flex>
         <header ng-controller="NavController as vm">
-            <md-toolbar>
+            <md-toolbar class="md-whiteframe-z1">
                 <div class="md-toolbar-tools">
                     <md-button class="md-icon-button" aria-label="More" ng-click="vm.sideNavToggle();">
                         <i class="material-icons md-24 md-light">menu</i>
