@@ -2,6 +2,8 @@
     'use strict';
 
     angular
-        .module('app.nav', []);
+        .module('app.nav', [
+            'app.core'
+        ]);
 
 })();

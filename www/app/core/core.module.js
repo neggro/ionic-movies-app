@@ -3,10 +3,14 @@
 
     angular
         .module('app.core', [
-            'ui.router',
-            'app.nav',
-            'app.movies',
-            'app.home'
+            /* Angular modules */
+
+            /* Cross-app modules */
+
+            /* 3rd-party modules */
+            'ionic',
+            'ngMaterial',
+            'ui.router'
         ]);
 
 })();

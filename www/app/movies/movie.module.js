@@ -2,6 +2,8 @@
     'use strict';
 
     angular
-        .module('app.movies', []);
+        .module('app.movies', [
+            'app.core'
+        ]);
 
 })();

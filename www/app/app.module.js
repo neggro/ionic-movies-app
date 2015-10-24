@@ -3,9 +3,13 @@
 
     angular
         .module('app', [
-            'ionic',
-            'ngMaterial',
-            'app.core'
+            /* Shared modules */
+            'app.core',
+
+            /* Feature areas */
+            'app.nav',
+            'app.movies',
+            'app.home'
         ]);
 
 })();
