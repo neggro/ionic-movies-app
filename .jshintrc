@@ -55,6 +55,8 @@
     "node": true,
 
     "globals": {
-        "angular": false
+        "angular": false,
+        "cordova": false,
+        "StatusBar": false
     }
 }
