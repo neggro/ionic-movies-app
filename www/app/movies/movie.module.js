@@ -1,7 +1,7 @@
-(function moviesAppMoviesModule() {
+(function appMoviesModule() {
     'use strict';
 
     angular
-        .module('moviesApp.movies', []);
+        .module('app.movies', []);
 
 })();

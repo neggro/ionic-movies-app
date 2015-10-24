@@ -1,8 +1,8 @@
-(function moviesAppMoviesService() {
+(function appMoviesService() {
     'use strict';
 
     angular
-        .module('moviesApp.movies')
+        .module('app.movies')
         .factory('moviesService', moviesService);
 
     moviesService.$inject = [

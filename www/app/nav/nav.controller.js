@@ -1,8 +1,8 @@
-(function moviesAppNavController() {
+(function appNavController() {
     'use strict';
 
     angular
-        .module('moviesApp.nav')
+        .module('app.nav')
         .controller('NavController', NavController);
 
     NavController.$inject = [

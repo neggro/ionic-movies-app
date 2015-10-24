@@ -1,8 +1,8 @@
-(function moviesAppHomeController() {
+(function appHomeController() {
     'use strict';
 
     angular
-        .module('moviesApp.home')
+        .module('app.home')
         .controller('HomeController', HomeController);
 
     HomeController.$inject = [

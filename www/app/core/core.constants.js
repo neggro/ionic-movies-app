@@ -1,8 +1,8 @@
-(function moviesAppCoreConstants() {
+(function appCoreConstants() {
     'use strict';
 
     angular
-        .module('moviesApp.core')
+        .module('app.core')
 
         .constant('API_KEY', '08dcd8a540a8fa2efbcf82dccad0473a')
 
