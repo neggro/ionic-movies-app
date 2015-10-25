@@ -18,8 +18,8 @@
         };
         return service;
         ////////////////
-        function discoverMovies() {
-            return $http.get(API_BASE_URL + 'discover/movie?api_key=' + API_KEY);
+        function discoverMovies(page) {
+            return $http.get(API_BASE_URL + 'discover/movie?api_key=' + API_KEY + '&page=' + page);
         }
     }
 

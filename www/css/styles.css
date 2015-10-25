@@ -135,13 +135,16 @@ md-toast {
   color: #ff5252;
   text-shadow: 0px 0px 1px #424242; }
 
+md-progress-circular {
+  margin: 20px auto 0; }
+
 .main {
   min-height: 100%; }
 
 /* container class like bootstrap */
 .container {
   padding: 0 8px;
-  margin: 15px auto; }
+  margin: 10px auto; }
 
 /*
 @media (min-width: 768px) {
