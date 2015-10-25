@@ -1,7 +1,9 @@
-(function moviesAppHomeModule() {
+(function appHomeModule() {
     'use strict';
 
     angular
-        .module('moviesApp.home', []);
+        .module('app.home', [
+            'app.core'
+        ]);
 
 })();

@@ -1,8 +1,8 @@
-(function moviesAppHomeConfig() {
+(function appHomeConfig() {
     'use strict';
 
     angular
-        .module('moviesApp.home')
+        .module('app.home')
         .config(homeConfig);
 
     homeConfig.$inject = [

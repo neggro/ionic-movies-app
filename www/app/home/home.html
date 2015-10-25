@@ -1,6 +1,6 @@
 <md-grid-list md-cols-sm="2" md-cols-md="4" md-cols-gt-md="5" md-row-height-gt-md="1:1.5" md-row-height="1:1.5" md-gutter="12px" md-gutter-gt-sm="8px">
     <md-grid-tile class="gray" ng-repeat="movie in vm.movies">
-        <img src="{{vm.imageDomain + movie.poster_path}}" alt="">
+        <img src="{{vm.imageDomain + movie.poster_path}}" alt="{{movie.title}}">
         <md-grid-tile-footer class="ng-hide">
             <h3>{{movie.title}}</h3>
         </md-grid-tile-footer>

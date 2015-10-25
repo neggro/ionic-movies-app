@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('moviesApp.core')
+        .module('app.core')
         .config(coreConfig)
         .config(themeConfig);
 

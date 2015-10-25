@@ -1,11 +1,15 @@
-(function moviesAppModule() {
+(function appModule() {
     'use strict';
 
     angular
-        .module('moviesApp', [
-            'ionic',
-            'ngMaterial',
-            'moviesApp.core'
+        .module('app', [
+            /* Shared modules */
+            'app.core',
+
+            /* Feature areas */
+            'app.nav',
+            'app.movies',
+            'app.home'
         ]);
 
 })();

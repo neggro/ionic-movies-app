@@ -1,8 +1,8 @@
-(function moviesAppHomeController() {
+(function appHomeController() {
     'use strict';
 
     angular
-        .module('moviesApp.home')
+        .module('app.home')
         .controller('HomeController', HomeController);
 
     HomeController.$inject = [
@@ -21,13 +21,14 @@
         ////////////////
         function activate() {
             return moviesService.discoverMovies()
-                .then(function successCallback(apiResponse) {
-                    vm.movies = apiResponse.data.results;
-                    console.log(apiResponse.data.results);
-                    return vm.movies;
-                }, function errorCallback(err) {
+                .then(successCallback, errorCallback);
 
-                });
+            function successCallback(apiResponse) {
+                vm.movies = apiResponse.data.results;
+                return vm.movies;
+            }
+
+            function errorCallback(err) {}
         }
     }
 

@@ -2,11 +2,15 @@
     'use strict';
 
     angular
-        .module('moviesApp.core', [
-            'ui.router',
-            'moviesApp.nav',
-            'moviesApp.movies',
-            'moviesApp.home'
+        .module('app.core', [
+            /* Angular modules */
+
+            /* Cross-app modules */
+
+            /* 3rd-party modules */
+            'ionic',
+            'ngMaterial',
+            'ui.router'
         ]);
 
 })();

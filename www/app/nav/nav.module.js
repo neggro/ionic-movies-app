@@ -1,7 +1,9 @@
-(function moviesAppNavModule() {
+(function appNavModule() {
     'use strict';
 
     angular
-        .module('moviesApp.nav', []);
+        .module('app.nav', [
+            'app.core'
+        ]);
 
 })();

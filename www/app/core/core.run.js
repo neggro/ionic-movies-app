@@ -1,12 +1,12 @@
-(function moviesAppModule() {
+(function appModule() {
     'use strict';
 
     angular
-        .module('moviesApp.core')
-        .run(moviesAppRun);
+        .module('app.core')
+        .run(appRun);
 
     /* @ngInject */
-    function moviesAppRun($ionicPlatform) {
+    function appRun($ionicPlatform) {
 
         $ionicPlatform.ready(ionicPlatformReady);
 
