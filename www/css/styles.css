@@ -82,6 +82,17 @@ body {
 md-content {
   background: #303030; }
 
+md-sidenav {
+  max-width: 240px !important;
+  min-width: 240px !important;
+  width: 240px !important; }
+  md-sidenav a {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none; }
+  md-sidenav a:focus {
+    outline: none; }
+
 md-card {
   background: #424242;
   margin-bottom: 30px; }
@@ -139,6 +150,7 @@ md-progress-circular {
   margin: 20px auto 0; }
 
 .main {
+  max-width: 100%;
   min-height: 100%; }
 
 /* container class like bootstrap */
@@ -165,3 +177,62 @@ md-progress-circular {
 */
 .container-dialog {
   padding: 0 10px; }
+
+.movies-list > div {
+  box-sizing: border-box;
+  -webkit-flex: 1 1 33.3333%;
+  -ms-flex: 1 1 33.3333%;
+  flex: 1 1 33.3333%;
+  margin: 3px 0;
+  max-height: 100%;
+  max-width: 33.3333%;
+  position: relative; }
+  @media (min-width: 480px) {
+    .movies-list > div {
+      -webkit-flex: 1 1 25%;
+      -ms-flex: 1 1 25%;
+      flex: 1 1 25%;
+      max-width: 25%; } }
+  @media (min-width: 600px) {
+    .movies-list > div {
+      -webkit-flex: 1 1 20%;
+      -ms-flex: 1 1 20%;
+      flex: 1 1 20%;
+      max-width: 20%; } }
+  @media (min-width: 960px) {
+    .movies-list > div {
+      -webkit-flex: 1 1 16.6666%;
+      -ms-flex: 1 1 16.6666%;
+      flex: 1 1 16.6666%;
+      max-width: 16.6666%; } }
+  .movies-list > div img {
+    display: block;
+    margin: auto;
+    width: 95%; }
+  .movies-list > div .no-poster {
+    background: #212121;
+    height: 100%;
+    position: absolute;
+    width: 100%; }
+    .movies-list > div .no-poster .data {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 0 10%;
+      position: absolute;
+      text-align: center;
+      top: 40%;
+      width: 80%; }
+
+md-dialog.main {
+  border-radius: 0; }
+
+md-toolbar.movie-tall {
+  background-position: center center;
+  background-size: 100% !important;
+  height: 176px;
+  min-height: 176px;
+  max-height: 176px; }
+  md-toolbar.movie-tall h1 {
+    text-shadow: 1px 1px 1px #212121; }
+  md-toolbar.movie-tall i {
+    text-shadow: 1px 1px 1px #212121; }

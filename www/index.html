@@ -16,13 +16,6 @@
         .x-ng-cloak {
             display: none !important;
         }
-        /*.container md-grid-tile {
-            transition: all 400ms ease-out 50ms;
-        }*/
-        .container md-grid-tile img {
-            height: 100%;
-            width: 100%;
-        }
     </style>
     <!-- compiled css output -->
     <link href="css/styles.min.css" rel="stylesheet">
@@ -43,6 +36,7 @@
     <script src="app/nav/nav.controller.js"></script>
     <script src="app/movies/movie.module.js"></script>
     <script src="app/movies/movie.service.js"></script>
+    <script src="app/movies/movie-details.controller.js"></script>
     <script src="app/home/home.module.js"></script>
     <script src="app/home/home.config.js"></script>
     <script src="app/home/home.controller.js"></script>
@@ -57,19 +51,19 @@
         </md-toolbar>
         <md-list>
             <md-list-item>
-                <md-button ng-href="#/latest">Latest</md-button>
+                <a ng-href="#/">Discover</a>
             </md-list-item>
             <md-list-item>
-                <md-button ng-href="#/popular">Popular</md-button>
+                <a ng-href="#/popular">Popular</a>
             </md-list-item>
             <md-list-item>
-                <md-button ng-href="#/top-rated">Top Rated</md-button>
+                <a ng-href="#/top-rated">Top Rated</a>
             </md-list-item>
             <md-list-item>
-                <md-button ng-href="#/now-playing">Now Playing</md-button>
+                <a ng-href="#/now-playing">Now Playing</a>
             </md-list-item>
             <md-list-item>
-                <md-button ng-href="#/upcoming">Upcoming</md-button>
+                <a ng-href="#/upcoming">Upcoming</a>
             </md-list-item>
         </md-list>
     </md-sidenav>

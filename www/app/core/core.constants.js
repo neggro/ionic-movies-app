@@ -8,6 +8,6 @@
 
         .constant('API_BASE_URL', 'http://api.themoviedb.org/3/')
 
-        .constant('IMAGE_BASE_URL', 'http://image.tmdb.org/t/p/w342');
+        .constant('IMAGE_BASE_URL', 'http://image.tmdb.org/t/p/');
 
 })();

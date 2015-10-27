@@ -20,7 +20,7 @@
 
                 var contentHeight = htmlElement.offsetHeight;
                 var contentScrollHeight = htmlElement.scrollHeight;
-                var scrollLimit = contentScrollHeight - 50;
+                var scrollLimit = contentScrollHeight - 80;
                 var currentScrollPosition = contentHeight + this.scrollTop;
 
                 if (currentScrollPosition > scrollLimit) {

@@ -19,8 +19,8 @@
                 controller: 'HomeController',
                 controllerAs: 'vm'
             })
-            .state('latest', {
-                url: '/',
+            .state('prefiltered-movies', {
+                url: '/:id',
                 templateUrl: 'app/home/home.html',
                 controller: 'HomeController',
                 controllerAs: 'vm'

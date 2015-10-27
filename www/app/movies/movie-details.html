@@ -1,0 +1,32 @@
+<md-dialog aria-label="{{vm.movie.title}}" layout="column" class="main" ng-cloak flex>
+    <header>
+        <md-toolbar md-scroll-shrink class="md-whiteframe-z1 movie-tall" style="background: url({{vm.imageDomain + vm.movie.backdrop_path}})">
+            <div class="md-toolbar-tools">
+                <md-button class="md-icon-button" aria-label="More" ng-click="vm.hideDialog();">
+                    <i class="material-icons md-24 md-light">arrow_back</i>
+                </md-button>
+                <h1>{{vm.movie.title}}</h1>
+                <span flex></span>
+                <md-menu md-position-mode="target-right target">
+                    <md-button class="md-icon-button" aria-label="More" ng-click="$mdOpenMenu($event);">
+                        <i class="material-icons md-24 md-light">more_vert</i>
+                    </md-button>
+                    <md-menu-content class="more-menu-content">
+                        <md-menu-item>
+                            <md-button ng-click="vm.userInfo();">User info</md-button>
+                        </md-menu-item>
+                        <md-menu-item>
+                            <md-button ng-click="vm.logout();">Logout</md-button>
+                        </md-menu-item>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+        </md-toolbar>
+    </header>
+    <md-content flex load-on-scroll>
+        <div class="container">
+            {{vm.movie.overview}}
+            <md-progress-circular ng-show="vm.loading" md-mode="indeterminate" class="md-accent"></md-progress-circular>
+        </div>
+    </md-content>
+</md-dialog>

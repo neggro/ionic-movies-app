@@ -1,0 +1,72 @@
+.movies-list > div {
+    box-sizing: border-box;
+    -webkit-flex: 1 1 33.3333%;
+    -ms-flex: 1 1 33.3333%;
+    flex: 1 1 33.3333%;
+    margin: 3px 0;
+    max-height: 100%;
+    max-width: 33.3333%;
+    position: relative;
+
+    @media (min-width: 480px) {
+        -webkit-flex: 1 1 25%;
+        -ms-flex: 1 1 25%;
+        flex: 1 1 25%;
+        max-width: 25%;
+    }
+    @media (min-width: 600px) {
+        -webkit-flex: 1 1 20%;
+        -ms-flex: 1 1 20%;
+        flex: 1 1 20%;
+        max-width: 20%;
+    }
+    @media (min-width: 960px) {
+        -webkit-flex: 1 1 16.6666%;
+        -ms-flex: 1 1 16.6666%;
+        flex: 1 1 16.6666%;
+        max-width: 16.6666%;
+    }
+
+    img {
+        display: block;
+        margin: auto;
+        width: 95%;
+    }
+
+    .no-poster {
+        background: #212121;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+
+        .data {
+            font-size: 16px;
+            font-weight: 700;
+            margin: 0 10%;
+            position: absolute;
+            text-align: center;
+            top: 40%;
+            width: 80%;
+        }
+    }
+}
+
+md-dialog.main {
+    border-radius: 0;
+}
+
+md-toolbar.movie-tall {
+    background-position: center center;
+    background-size: 100% !important;
+    height: 176px;
+    min-height: 176px;
+    max-height: 176px;
+
+    h1 {
+        text-shadow: 1px 1px 1px #212121;
+    }
+
+    i {
+        text-shadow: 1px 1px 1px #212121;
+    }
+}

@@ -16,6 +16,22 @@ md-content {
     background: #303030;
 }
 
+md-sidenav {
+    max-width: 240px !important;
+    min-width: 240px !important;
+    width: 240px !important;
+
+    a {
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    a:focus {
+        outline: none;
+    }
+}
+
 md-card {
     background: #424242;
     margin-bottom: 30px;
@@ -87,6 +103,7 @@ md-progress-circular {
 }
 
 .main {
+    max-width: 100%;
     min-height: 100%;
 }
 
